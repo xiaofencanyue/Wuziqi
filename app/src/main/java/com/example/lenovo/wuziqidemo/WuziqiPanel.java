@@ -44,7 +44,7 @@ public class WuziqiPanel extends View {
     public WuziqiPanel(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        setBackgroundColor(0x44ff0000);
+//        setBackgroundColor(0x44ff0000);
         init();
 
     }
@@ -269,6 +269,14 @@ public class WuziqiPanel extends View {
             canvas.drawLine(startX, y, endX, y, mPaint);
             canvas.drawLine(y, startX, y, endX, mPaint);
         }
+    }
+
+    public void start() {
+        mWhiteArray.clear();
+        mBlackArray.clear();
+        mIsGameOver = false;
+        mIsWhiteWinner = false;
+        invalidate();
     }
 
     private static final String INSTANCE = "instance";
